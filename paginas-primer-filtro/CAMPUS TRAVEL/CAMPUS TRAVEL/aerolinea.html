@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Travel</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="campusTravel..css">
+</head>
+<body>
+<h1 id="tituloG"> Gestion De Empleados </h1>
+
+ <!-- ********************** gestion de clientes ******************************** -->
+<div class="formulario">
+<form id="formularioG"class="w-75">
+    <div class="mb-3">
+      <label for="N. documento" class="input-group-text" style="background-color: #212529; color: #fff;" >N.documento</label>
+      <input type="number" class="form-control" id="ndocumento" placeholder="C:C">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text" style="background-color: #212529; color: #fff;">Nombres</label>
+        <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text" style="background-color: #212529; color: #fff;">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+    </div>
+    <div class="mb-3">
+        <label for="telefono"class="input-group-text"style="background-color: #212529; color: #fff;">Telefono</label>
+        <input type="tel" class="form-control" id="telefono" placeholder="123456">
+    </div>
+    <div class="mb-3">
+      <label for="email"class="input-group-text"style="background-color: #212529; color: #fff;">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text"style="background-color: #212529; color: #fff;">Fecha De Nacimiento</label>
+        <input type="date" class="form-control" id="fechadenacimiento" placeholder="fecha de nacimiento">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text"style="background-color: #212529; color: #fff;">Nacionalidad</label>
+        <input type="text" class="form-control" id="nacionalidad" placeholder="Nacionalidad">
+    </div>
+    <button type="submit" class="btn btn-dark" style="color: white;" id="crearB">Crear</button>
+    <button type="button" class="btn btn-dark" style="color: white;" id="consultar">Modificar</button>
+</form>
+</div>
+
+<table id="padreTabla" class="table">
+    <thead>
+      <tr>
+        <th >N.documento</th>
+        <th >Nombres</th>
+        <th >Apellidos</th>
+        <th >Telefono</th>
+        <th >Email</th>
+        <th >F.Nacimiento</th>
+        <th >Nacionalidad</th>
+      </tr>
+    </thead>
+    <tbody >
+    </tbody>
+</table>
+  
+  <!-- ********************** rutas aereas  ******************************** -->
+
+<h1 id="titulo"> Rutas Aereas </h1>
+
+<div class="formulario">
+<form id="formularioR"class="w-75">
+    <div class="mb-3">
+      <label for="N. documento" class="input-group-text" style="background-color: #212529; color: #fff;" >ID</label>
+      <input type="number" class="form-control" id="ID" placeholder="ID">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text" style="background-color: #212529; color: #fff;">Nombre de la ruta</label>
+        <input type="text" class="form-control" id="Nombre de la ruta" placeholder=" Nombre de la ruta">Nombre de la ruta
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text" style="background-color: #212529; color: #fff;">Valor Tiquete</label>
+        <input type="text" class="form-control" id="Valor Tiquete" placeholder="Valor Tiquete">
+    </div>
+    <div class="mb-3">
+        <label for="telefono"class="input-group-text"style="background-color: #212529; color: #fff;">Ciudad origen</label>
+        <input type="tel" class="form-control" id="Ciudad origen" placeholder=" origen">
+    </div>
+    <div class="mb-3">
+      <label for="email"class="input-group-text"style="background-color: #212529; color: #fff;">Ciudad destino</label>
+      <input type="email" class="form-control" id="Ciudad destino" placeholder="destino">
+    </div>
+    <div class="mb-3">
+        <label for="N. documento"class="input-group-text"style="background-color: #212529; color: #fff;">Puntos para fidelización</label>
+        <input type="text" class="form-control" id="Puntos para fidelización" placeholder="Puntos">
+    </div>
+    <button type="button" class="btn btn-dark" style="color: white;" id="consultar">Crear</button>
+</form>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th >ID</th>
+        <th >Nombre de la ruta</th>
+        <th >Valor Tiquete</th>
+        <th >Ciudad origen</th>
+        <th >Ciudad destino</th>
+        <th >Puntos </th>
+      </tr>
+    </thead>
+    <tbody id="padreTabla">
+    </tbody>
+</table>
+
+  
+  
+let clientes = [];
+let rutas = [];
+
+
+// Función para crear clientes
+function CrearCliente (Ndocumentos,Nombres,Apellidos,Telefono,Email,FNacimiento,Nacionalidad){
+    const clientes  = {
+        Ndocumentos,
+        Nombres,
+        Apellidos,
+        Telefono,
+        Email,
+        FNacimiento,
+        Nacionalidad
+    } ;
+    clientes.push(cliente)
+}
+
+
+
+
+
+
+   <script src="./campusTravel..js"></script>
+</body>
+</html>

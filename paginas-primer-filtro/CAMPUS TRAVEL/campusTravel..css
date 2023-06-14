@@ -1,0 +1,13 @@
+.formulario{       /* formulario de registro de clientes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tituloG {
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+}
+

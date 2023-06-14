@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.btn-guardar:hover{
+    color:white;
+    transform: scale(1.25);
+    transition: transform 0.5s ease;
+
+}
+
+.btn-guardar:active{
+    color:white;
+}
+
+.contenedorPrincipal{
+    background:linear-gradient(75deg, rgb(0, 238, 255),rgb(0, 28, 187));
+}

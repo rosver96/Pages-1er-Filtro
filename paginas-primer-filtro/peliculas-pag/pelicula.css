@@ -1,0 +1,41 @@
+.cartas {
+    margin-bottom: 20px;
+    padding: 3px;
+}
+.container {
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.formulario{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 15rem;
+}
+.cartas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 3rem;
+    margin: 4rem;
+    border-radius: 3px solid black;
+}
+h1{
+     margin-right: 15rem;
+}
+h2{
+    margin-bottom: 5rem;
+}
+.head{
+    margin-bottom: 5rem;
+    background-color:black;
+    color: white;
+}

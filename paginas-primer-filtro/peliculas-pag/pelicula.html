@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="pelicula.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <header> 
+
+        <div class="head"> 
+            
+            <ul class="nav justify-content-center">
+                <li >
+                    <h1 class="justify-content-start" style="margin-left: -100px;"> Cinema This is my movie </h1>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="https://www.cinemark.com.co/" target="_blank" style="color: white;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.cinemark.com.co/corporativo/quienes-somos" target="_blank"  style="color: white;">Contactos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.cinemark.com.co/corporativo/contactanos"  target="_blank" style="color: white;">Quienes Somos</a>
+                </li>
+              </ul>
+
+        </div>
+        
+    </header>
+
+    <div class="container" style="justify-content: center; align-items: center;" >
+        <div class="row">
+          <div class="col-md-12 formulario2 ">
+            <form id="formulario">
+              <h2 style="margin-bottom: 3rem; text-align: center;  font-weight: 800; " >Agregar Película</h2>
+              <div class="mb-3">
+                <label for="titulo" class="input-group-text" style="background-color: #212529; color: #fff;">Título:</label>
+                <input type="text" class="form-control" id="titulo" required>
+              </div>
+              <div class="mb-3">
+                <label for="genero" class="input-group-text" style="background-color: #212529; color: #fff;">Género:</label>
+                <input type="text" class="form-control" id="genero" required>
+              </div>
+              <div class="mb-3">
+                <label for="duracion" class="input-group-text" style="background-color: #212529; color: #fff;">Duración:</label>
+                <input type="text" class="form-control" id="duracion" required>
+              </div>
+              <div class="mb-3">
+                <label for="director" class="input-group-text" style="background-color: #212529; color: #fff;">Director:</label>
+                <input type="text" class="form-control" id="director" required>
+              </div>
+              <div class="btn-container">
+                <button type="submit" class="btn btn-dark" style="color: white;" >Agregar</button>
+                <button type="button" class="btn btn-dark" style="color: white;" id="consultar">Consultar</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+ <div class="cartas">
+    <div  class="col-md-10 " >
+        <div id="cartas" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+</div>
+
+<script src="pelicula.js"></script>
+</body>
+</html>

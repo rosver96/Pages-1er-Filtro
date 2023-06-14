@@ -1,0 +1,29 @@
+{
+  "clientes": [
+    {
+      "identificacion": "12345",
+      "nombre": "Edward",
+      "apellido": "carvajal",
+      "telefono": "677898687",
+      "fechNaci": "2023-05-12",
+      "cuidadOrigen": "bucaramanga",
+      "paisOrigen": "colombia",
+      "correo": "hola@gmail.com",
+      "id": 1
+    },
+    {
+      "identificacion": "2",
+      "nombre": "Mauricio",
+      "apellido": "carvajal",
+      "telefono": "123243456",
+      "fechNaci": "2023-05-12",
+      "cuidadOrigen": "bucaramanga",
+      "paisOrigen": "colombia",
+      "correo": "hola@gmail.com",
+      "id": 2
+    }
+  ],
+  "rutas": [],
+  "flota": [],
+  "personal": []
+}

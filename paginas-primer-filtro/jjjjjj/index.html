@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Películas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-danger {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Películas</h1>
+
+    <form id="movieForm">
+        <label for="title">Título:</label>
+        <input type="text" id="title" required>
+
+        <label for="genre">Género:</label>
+        <input type="text" id="genre" required>
+
+        <label for="duration">Duración:</label>
+        <input type="text" id="duration" required>
+
+        <label for="director">Director:</label>
+        <input type="text" id="director" required>
+
+        <button type="submit" class="btn">Agregar</button>
+    </form>
+
+    <table id="movieTable">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Género</th>
+                <th>Duración</th>
+                <th>Director</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // Almacenar las películas en un mapa
+        const movies = new Map();
+
+        // Función para agregar una película
+        function addMovie(event) {
+            event.preventDefault();
+
+            const titleInput = document.getElementById('title');
+            const genreInput = document.getElementById('genre');
+            const durationInput = document.getElementById('duration');
+            const directorInput = document.getElementById('director');
+
+            const movie = {
+                title: titleInput.value,
+                genre: genreInput.value,
+                duration: durationInput.value,
+                director: directorInput.value
+            };
+
+            movies.set(movie.title, movie);
+            titleInput.value = '';
+            genreInput.value = '';
+            durationInput.value = '';
+            directorInput.value = '';
+
+            renderMovies();
+        }
+
+        // Función para eliminar una película
+        function deleteMovie(title) {
+            movies.delete(title);
+            renderMovies();
+        }
+
+        // Función para renderizar la tabla de películas
+        function renderMovies() {
+            const movieTable = document.getElementById('movieTable');
+            const tbody = movieTable.getElementsByTagName('tbody')[0];
+            tbody.innerHTML = '';
+
+            movies.forEach(movie => {
+                const row = document.createElement('tr');
+                const titleCell = document.createElement('td');
+                titleCell.textContent = movie.title;
+                row.appendChild(titleCell);
+
+                const genreCell = document.createElement('td');
+                genreCell.textContent = movie.genre;
+                row.appendChild(genreCell);
+
+                const durationCell = document.createElement('td');
+                durationCell.textContent = movie.duration;
+                row.appendChild(durationCell);
+
+                const directorCell = document.createElement('td');
+                directorCell.textContent = movie.director;
+                row.appendChild(directorCell);
+
+                const actionsCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Eliminar';
+                deleteButton.classList.add('btn', 'btn-danger');
+                deleteButton.addEventListener('click', () => deleteMovie(movie.title));
+                actionsCell.appendChild(deleteButton);
+                row.appendChild(actionsCell);
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // Event listener para el formulario
+        const movieForm = document.getElementById('movieForm');
+        movieForm.addEventListener('submit', addMovie);
+    </script>
+</body>
+</html>
